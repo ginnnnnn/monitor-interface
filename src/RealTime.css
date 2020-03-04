@@ -1,0 +1,134 @@
+.Realtime-container {
+  background: #2c2933;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Realtime-title {
+  width: 100%;
+  height: 2rem;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+  padding: 5px 0;
+  border-bottom: 1px solid grey;
+}
+.Realtime-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Realtime-content__titleList {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px;
+  background: #333333;
+  border-bottom: 1px solid grey;
+}
+.Realtime-content__title1 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__title2 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__title3 {
+  color: white;
+  font-size: 1rem;
+  width: 21%;
+}
+.Realtime-content__title4 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__title5 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__title6 {
+  color: white;
+  font-size: 1rem;
+  width: 13%;
+}
+.Realtime-content__title7 {
+  color: white;
+  font-size: 1rem;
+  width: 13%;
+}
+.Realtime-content__title8 {
+  color: white;
+  font-size: 1rem;
+  width: 13%;
+}
+.Realtime-content__title9 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__title10 {
+  color: white;
+  font-size: 1rem;
+  width: 15%;
+}
+.Realtime-content__contentList {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px;
+  border-bottom: 1px solid grey;
+}
+.Realtime-content__1 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__2 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__3 {
+  color: white;
+  font-size: 1rem;
+  width: 21%;
+}
+.Realtime-content__4 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__5 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__6 {
+  color: white;
+  font-size: 1rem;
+  width: 13%;
+}
+.Realtime-content__7 {
+  color: white;
+  font-size: 1rem;
+  width: 13%;
+}
+.Realtime-content__8 {
+  color: white;
+  font-size: 1rem;
+  width: 13%;
+}
+.Realtime-content__9 {
+  color: white;
+  font-size: 1rem;
+  width: 5%;
+}
+.Realtime-content__10 {
+  color: white;
+  font-size: 1rem;
+  width: 15%;
+}

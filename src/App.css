@@ -1,38 +1,157 @@
 .App {
   text-align: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.App-title {
+  width: 500px;
+  position: absolute;
+  font-size: 2.6rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  background: limegreen;
+  padding: 10px 0;
+  top: -30px;
+  left: calc(50% - 250px);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.InterFace {
+  margin: 3rem 5px 0;
+  border-radius: 40px;
+  height: 88vh;
+  background: #2d3b4b;
+  display: flex;
+  padding: 1rem 1.5rem;
+  flex-direction: column;
+}
+.Display {
+  display: flex;
+  height: 88%;
+  justify-content: space-around;
+}
+.Display-section1 {
+  width: 70%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Display-section2 {
+  width: 30%;
+  padding: 1rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Display-section2__margin {
+  height: 10%;
+}
+.Display-section2__warning {
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Display-section2__warning-pannel {
+  height: 90%;
+  width: 60%;
+  border: 1px solid grey;
+  border-radius: 25px;
+  background: #2d2d2d;
+  color: lightgreen;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 15px 25px;
+}
+.warning-description-container {
+  width: 100%;
+  margin: 5px 15px;
+  display: flex;
+}
+.warning-description {
+  margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Display-section2__pie {
+  height: 45%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.Conclution {
+  display: flex;
+  height: 12%;
+  justify-content: space-around;
+  align-items: center;
+}
+.Conclution-div {
+  width: 18%;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.Conclution-block {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid yellow;
+  margin-bottom: 5px;
+  color: green;
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Section-title {
+  text-align: start;
+  font-size: 2rem;
+  color: white;
+  padding: 0 0 10px 0;
+  font-weight: bold;
+  border-bottom: 2px solid grey;
+}
+.Section-line {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Section-line__title {
+  margin-right: 15px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+.Section-line__img {
+  width: 3rem;
+  padding: 2px;
+  border: 2px solid #2d3b4b;
+}
+.Section-line__img:hover {
+  border: 2px solid yellowgreen;
+}
+.Section-line__container {
+  display: flex;
+  flex-direction: column;
+}
+.Section-line__description {
+  margin-top: 3px;
+  color: white;
+  font-size: 1.2rem;
+}
+.Conclution-div__normal {
+  border: 1.5px solid #00bc49;
+}
+.Conclution-div__supply {
+  border: 1.5px solid #f1bf17;
+}
+.Conclution-div__warming {
+  border: 1.5px solid #fdf100;
+}
+.Conclution-div__warning {
+  border: 1.5px solid #de1a22;
+}
+.Conclution-div__percentage {
+  border: 1.5px solid white;
 }
