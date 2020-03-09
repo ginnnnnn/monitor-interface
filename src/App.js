@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/overview" component={SecondPage} />
+        <Route exact path="/monitor/:pid" component={SecondPage} />
         <Route path="/" component={FirstPage} />
       </Switch>
     </div>

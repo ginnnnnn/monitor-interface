@@ -6,13 +6,19 @@ import Section2Pie from "./Section2Pie";
 import BarChart from "./BarChart";
 import AreaChart from "./AreaChart";
 import RealTime from "./Realtime";
+import MonitorOverview from "./Monitor-overview";
 
-const SecondPage = ({ history }) => {
+const SecondPage = ({ history, match }) => {
+  console.log(match.params.pid);
   const handleOnClick = () => {
     history.push("/");
   };
   return (
     <div className="SecondPageContainer">
+      <div className="SecondPagePrograssBar-overview ">
+        <MonitorOverview pid={match.params.pid} />
+      </div>
+
       <div className="SecondPagePrograssBar-section1">
         <PrograssPie
           t1="設備即時稼動率"

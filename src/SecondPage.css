@@ -4,6 +4,60 @@
   background: #2d3b4b;
   min-height: 100vh;
 }
+.SecondPagePrograssBar-overview {
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.SecondPagePrograssBar-overview__monitor {
+  width: 66%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #2c2933;
+  margin: 0 5px;
+  position: relative;
+}
+.SecondPagePrograssBar-overview__monitor-pie {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.SecondPagePrograssBar-overview__monitor-lineboxes {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.SecondPagePrograssBar-overview__warning {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #2c2933;
+  margin: 0 5px;
+  position: relative;
+}
+.SecondPagePrograssBar-overview__title {
+  position: absolute;
+  width: 100%;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+  top: 8px;
+  text-align: center;
+}
 .SecondPagePrograssBar-section1 {
   height: 300px;
   display: flex;

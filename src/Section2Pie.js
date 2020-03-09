@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { PieChart, Pie, Sector, Cell, Label } from "recharts";
+import { PieChart, Pie, Cell } from "recharts";
 
 const COLORS = ["#ffff00", "#EEEEEE", "#FF725C", "#777777"];
 
@@ -10,7 +10,6 @@ const data = [
   { name: "生產", value: 1.0 }
 ];
 const customLabel = ({ midAngle, x, y, name, value, ...props }) => {
-  console.log(props);
   let isLeft;
   if (midAngle > 90 && midAngle < 270) {
     isLeft = true;

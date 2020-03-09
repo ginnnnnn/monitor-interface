@@ -129,8 +129,8 @@ const RealTime = () => {
           <div className="Realtime-content__title9">稼動率</div>
           <div className="Realtime-content__title10">警報資訊</div>
         </div>
-        {data.map(({ C1, C2, C3, C4, C5, C6, C7, C8, C9, C10 }) => (
-          <div className="Realtime-content__contentList">
+        {data.map(({ C1, C2, C3, C4, C5, C6, C7, C8, C9, C10 }, i) => (
+          <div key={C1 + i} className="Realtime-content__contentList">
             <div className="Realtime-content__1">{C1}</div>
             <div className="Realtime-content__2">{C2}</div>
             <div className="Realtime-content__3">{C3}</div>

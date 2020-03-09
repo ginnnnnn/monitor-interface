@@ -83,7 +83,10 @@ const LineBoxes = ({ title, databaseArr, history }) => {
               className="Section-line__Container"
             >
               <img alt="boxes" className="Section-line__img" src={cross} />
-              <div className="Section-line__description"></div>
+              <div className="Section-line__description">
+                {title}
+                {description}
+              </div>
             </div>
           );
         }
