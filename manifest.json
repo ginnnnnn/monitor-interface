@@ -1,6 +1,6 @@
 {
-  "short_name": "戰情室",
-  "name": "工業互聯網平台介面",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",

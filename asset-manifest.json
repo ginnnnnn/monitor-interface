@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/monitor-interface/static/css/main.3844665d.chunk.css",
-    "main.js": "/monitor-interface/static/js/main.fa69db68.chunk.js",
-    "main.js.map": "/monitor-interface/static/js/main.fa69db68.chunk.js.map",
+    "main.css": "/monitor-interface/static/css/main.015f183a.chunk.css",
+    "main.js": "/monitor-interface/static/js/main.2b8645f0.chunk.js",
+    "main.js.map": "/monitor-interface/static/js/main.2b8645f0.chunk.js.map",
     "runtime-main.js": "/monitor-interface/static/js/runtime-main.b7545304.js",
     "runtime-main.js.map": "/monitor-interface/static/js/runtime-main.b7545304.js.map",
-    "static/js/2.968ea8ba.chunk.js": "/monitor-interface/static/js/2.968ea8ba.chunk.js",
-    "static/js/2.968ea8ba.chunk.js.map": "/monitor-interface/static/js/2.968ea8ba.chunk.js.map",
+    "static/js/2.c72aea1c.chunk.js": "/monitor-interface/static/js/2.c72aea1c.chunk.js",
+    "static/js/2.c72aea1c.chunk.js.map": "/monitor-interface/static/js/2.c72aea1c.chunk.js.map",
     "index.html": "/monitor-interface/index.html",
-    "precache-manifest.837a6581d0f7e6d091dbd1811b98037f.js": "/monitor-interface/precache-manifest.837a6581d0f7e6d091dbd1811b98037f.js",
+    "precache-manifest.fdab212c2d2b0344ae1aa475f1a93ce0.js": "/monitor-interface/precache-manifest.fdab212c2d2b0344ae1aa475f1a93ce0.js",
     "service-worker.js": "/monitor-interface/service-worker.js",
-    "static/css/main.3844665d.chunk.css.map": "/monitor-interface/static/css/main.3844665d.chunk.css.map",
-    "static/js/2.968ea8ba.chunk.js.LICENSE.txt": "/monitor-interface/static/js/2.968ea8ba.chunk.js.LICENSE.txt",
+    "static/css/main.015f183a.chunk.css.map": "/monitor-interface/static/css/main.015f183a.chunk.css.map",
+    "static/js/2.c72aea1c.chunk.js.LICENSE.txt": "/monitor-interface/static/js/2.c72aea1c.chunk.js.LICENSE.txt",
     "static/media/cross.png": "/monitor-interface/static/media/cross.791abe0a.png",
     "static/media/green.png": "/monitor-interface/static/media/green.e4e17521.png",
     "static/media/grey.png": "/monitor-interface/static/media/grey.3f5d2d9c.png",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b7545304.js",
-    "static/js/2.968ea8ba.chunk.js",
-    "static/css/main.3844665d.chunk.css",
-    "static/js/main.fa69db68.chunk.js"
+    "static/js/2.c72aea1c.chunk.js",
+    "static/css/main.015f183a.chunk.css",
+    "static/js/main.2b8645f0.chunk.js"
   ]
 }
