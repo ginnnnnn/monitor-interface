@@ -1,0 +1,244 @@
+.PageContainer {
+  display: flex;
+  background: #2d3b4b;
+  min-height: 100vh;
+  padding: 1rem 1.5rem;
+}
+.No-sensor {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #eee;
+}
+.ViewController-Container {
+  width: 15%;
+  background: #2c2933;
+  margin: 0 5px;
+}
+.ViewController-Container h2 {
+  color: white;
+}
+.ChartDisplay-Container {
+  width: 85%;
+  min-height: 100vh;
+  background: #2c2933;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 0;
+}
+.Lines-Container {
+  width: 99%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+.Chart-part {
+  min-width: 19vw;
+  min-height: 150px;
+  display: flex;
+  position: relative;
+  margin: 5px 5px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.Chart-part_size-1 {
+  /* width={300}
+  height={180} */
+  min-width: 19vw;
+  min-height: 150px;
+}
+.Chart-part_size-2 {
+  /* width={400}
+  height={240} */
+  /* width={450}
+  height={270} */
+  min-width: 30%;
+  min-height: 150px;
+}
+
+.Running {
+  background: #2bdf9d;
+}
+.Not-Running {
+  background: #96ccff;
+}
+
+.Chart-part__part-title {
+  margin: 0 auto 10px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.LineChart-Container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.Xaxis-unit {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  padding: 0 10px 0 60px;
+}
+.Xaxis-title {
+  font-size: 0.8rem;
+}
+.LineChart-Container-Running-ok {
+  background: #cdecff;
+}
+.LineChart-Container-Running-Not {
+  background: #ff725c;
+}
+.LineChart-Container-Not-Running-Not {
+  background: #fbf1a9;
+}
+.AutoDisplay-Container {
+  margin: 8px 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AutoDisplay-Input {
+  width: 2rem;
+  margin: 0 2px 0px 3px;
+}
+.AutoDisplay {
+  color: rgba(0, 0, 0, 0.54);
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.00938em;
+}
+.SizeSelector-Container {
+  background: #2bdf9d;
+  padding: 15px 5px;
+  margin: 0 15px;
+  border-radius: 5px;
+  color: rgb(68, 11, 11);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.setting-btn {
+  background: #96ccff;
+  width: 8rem;
+  margin: 15px auto;
+  border-radius: 5px;
+  color: #333333;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.setting-btn:hover {
+  background: #357edd;
+  color: white;
+}
+.StatusSetting-Container {
+  background: white;
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding: 1rem 1.5rem;
+}
+.DataSetting-Container {
+  background: white;
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding: 1rem 1.5rem;
+}
+.setting-1-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  border: 1px solid black;
+  border-radius: 5px;
+  border-right: none;
+  border-bottom: none;
+}
+.setting-1-dropdown {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.setting-1-dropdown div {
+  text-align: center;
+  border-right: 1px solid black;
+}
+.setting-1-dropdown-1 {
+  width: 30%;
+}
+.setting-1-dropdown-2 {
+  width: 70%;
+}
+.setting-1-title {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.setting-1-title div {
+  width: 100%;
+  text-align: center;
+  border-right: 1px solid black;
+}
+.setting-1-content {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.setting-1-content div {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid black;
+}
+.setting-Input {
+  width: 100%;
+  font-size: 0.9rem;
+  height: 100%;
+  text-align: center;
+}
+.btn-collection {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+.btn-collection button {
+  width: 7rem;
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 3px 15px;
+  color: white;
+}
+.btn-collection-btn1 {
+  background: blue;
+}
+.btn-collection-btn2 {
+  background: red;
+}
+.dropdown-input {
+  display: inline-block;
+  margin: 0 auto;
+  background: yellow;
+  border-radius: 5px;
+  padding: 0;
+  color: white;
+  padding: 3px;
+}

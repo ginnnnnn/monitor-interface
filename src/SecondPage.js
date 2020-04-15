@@ -9,7 +9,6 @@ import RealTime from "./Realtime";
 import MonitorOverview from "./Monitor-overview";
 
 const SecondPage = ({ history, match }) => {
-  console.log(match.params.pid);
   const handleOnClick = () => {
     history.push("/");
   };

@@ -7,7 +7,7 @@ import { withRouter } from "react-router-dom";
 const warningMsg = [
   { msg: "A05 12004(D4)刀補位待補", date: "2019-08-07- 10:06:15" },
   { msg: "A06 12005(D5)刀補位待補", date: "2019-09-07- 10:06:15" },
-  { msg: "C05 12006(C4)刀補位待補", date: "2019-08-07- 10:06:15" }
+  { msg: "C05 12006(C4)刀補位待補", date: "2019-08-07- 10:06:15" },
 ];
 
 const database = {
@@ -21,7 +21,7 @@ const database = {
     "sleep",
     "normal",
     "normal",
-    "normal"
+    "normal",
   ],
   B: [
     "normal",
@@ -33,7 +33,7 @@ const database = {
     "warming",
     "supply",
     "normal",
-    "normal"
+    "normal",
   ],
   C: [
     "supply",
@@ -45,7 +45,7 @@ const database = {
     "normal",
     "normal",
     "sleep",
-    "normal"
+    "normal",
   ],
   D: [
     "normal",
@@ -57,7 +57,7 @@ const database = {
     "supply",
     "warning",
     "normal",
-    "normal"
+    "normal",
   ],
   E: [
     "normal",
@@ -69,8 +69,8 @@ const database = {
     "normal",
     "normal",
     "sleep",
-    "normal"
-  ]
+    "normal",
+  ],
 };
 
 const MonitorOverview = ({ pid, history }) => {
@@ -84,6 +84,7 @@ const MonitorOverview = ({ pid, history }) => {
   //   const warningData = totalArray.filter(key => key === "warning").length;
   //   const totalData = totalArray.length;
   const handleOnClick = () => {
+    // console.log(history);
     history.push("/");
   };
   return (

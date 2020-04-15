@@ -1,9 +1,19 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-const ProcessCard = ({ src, cn, en, green, yellow, red, history }) => {
+const ProcessCard = ({
+  src,
+  cn,
+  en,
+  green,
+  yellow,
+  red,
+  history,
+  match,
+  ...props
+}) => {
   const handleOnClick = () => {
-    history.push("/monitor/" + en);
+    history.push("/monitor-interface/monitor/" + en);
   };
   return (
     <div className="process-container" onClick={handleOnClick}>

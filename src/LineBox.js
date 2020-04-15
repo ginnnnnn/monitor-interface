@@ -7,9 +7,14 @@ import grey from "./assest/boxes/grey.png";
 import green from "./assest/boxes/green.png";
 import cross from "./assest/boxes/cross.png";
 
-const LineBoxes = ({ title, databaseArr, history }) => {
-  const handleOnClick = () => {
-    history.push("/overview");
+const LineBoxes = ({ title, databaseArr, match, history }) => {
+  const handleOnClick = (title, description) => {
+    const machineName = title + description;
+    console.log(match);
+
+    history.push(
+      "/monitor-interface/monitor/" + match.params.pid + "/" + machineName
+    );
   };
   return (
     <React.Fragment>
@@ -18,7 +23,7 @@ const LineBoxes = ({ title, databaseArr, history }) => {
         if (status === "normal") {
           return (
             <div
-              onClick={handleOnClick}
+              onClick={() => handleOnClick(title, description)}
               key={status + i}
               className="Section-line__Container"
             >
@@ -33,7 +38,7 @@ const LineBoxes = ({ title, databaseArr, history }) => {
         if (status === "warning") {
           return (
             <div
-              onClick={handleOnClick}
+              onClick={() => handleOnClick(title, description)}
               key={status + i}
               className="Section-line__Container"
             >
@@ -48,7 +53,7 @@ const LineBoxes = ({ title, databaseArr, history }) => {
         if (status === "supply") {
           return (
             <div
-              onClick={handleOnClick}
+              onClick={() => handleOnClick(title, description)}
               key={status + i}
               className="Section-line__Container"
             >
@@ -63,7 +68,7 @@ const LineBoxes = ({ title, databaseArr, history }) => {
         if (status === "warming") {
           return (
             <div
-              onClick={handleOnClick}
+              onClick={() => handleOnClick(title, description)}
               key={status + i}
               className="Section-line__Container"
             >
@@ -78,7 +83,7 @@ const LineBoxes = ({ title, databaseArr, history }) => {
         if (status === "sleep") {
           return (
             <div
-              onClick={handleOnClick}
+              onClick={() => handleOnClick(title, description)}
               key={status + i}
               className="Section-line__Container"
             >
@@ -92,7 +97,7 @@ const LineBoxes = ({ title, databaseArr, history }) => {
         }
         return (
           <div
-            onClick={handleOnClick}
+            onClick={() => handleOnClick(title, description)}
             key={status + i}
             className="Section-line__Container"
           >
