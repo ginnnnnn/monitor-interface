@@ -18,8 +18,9 @@
   background: #2c2933;
   margin: 0 5px;
 }
-.ViewController-Container h2 {
+.ViewController-Container h3 {
   color: white;
+  margin: 10px auto;
 }
 .ChartDisplay-Container {
   width: 85%;
@@ -161,6 +162,19 @@
   max-height: 80vh;
   overflow-y: scroll;
   padding: 1rem 1.5rem;
+}
+.TimeGapSetting-Container {
+  background: white;
+  max-height: 80vh;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.TimeGapSetting {
+  min-width: 28rem;
+  display: flex;
+  justify-content: space-between;
 }
 .setting-1-container {
   display: flex;

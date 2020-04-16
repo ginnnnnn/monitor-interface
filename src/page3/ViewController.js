@@ -5,6 +5,7 @@ import DataSetting from "./DataSetting";
 import StatusSetting from "./StatusSetting";
 import Switcher from "../util/Switcher";
 import MyDropdown from "../util/Mydropdown";
+import TimeGapSetting from "./TimeGapSetting";
 
 const ViewController = ({
   w,
@@ -20,6 +21,9 @@ const ViewController = ({
   setAutoSecond,
   errorFirst,
   setErrorFirst,
+  timegap,
+  setTimegap,
+  DataBind,
 }) => {
   const [open, setOpen] = useState(false);
   const [child, setChild] = useState("status");
@@ -37,7 +41,7 @@ const ViewController = ({
   };
   return (
     <div className="ViewController-Container">
-      <h2>顯示設定</h2>
+      <h3>顯示設定</h3>
       <div className="SizeSelector-Container">
         <SizeSelector w={w} setW={setW} setPage={setPage} />
         <div className="AutoDisplay-Container">
@@ -62,8 +66,13 @@ const ViewController = ({
         </div>
         <Switcher check={errorFirst} setCheck={setErrorFirst} />
       </div>
-      <h2>資料設定</h2>
+      <h3>資料設定</h3>
       <MyDropdown />
+      <div>
+        <div className="setting-btn" onClick={() => handleOpen("time")}>
+          時間設定
+        </div>
+      </div>
       <div>
         <div className="setting-btn" onClick={() => handleOpen("status")}>
           狀態設定
@@ -81,12 +90,20 @@ const ViewController = ({
             running={running}
             setRunning={setRunning}
           />
-        ) : (
+        ) : child === "sensor" ? (
           <DataSetting
             setSensors={setSensors}
             sensors={sensors}
             handleClose={handleClose}
             setPage={setPage}
+          />
+        ) : (
+          <TimeGapSetting
+            timegap={timegap}
+            setTimegap={setTimegap}
+            handleClose={handleClose}
+            setPage={setPage}
+            DataBind={DataBind}
           />
         )}
       </Modal>

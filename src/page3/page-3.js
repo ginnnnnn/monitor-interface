@@ -7,6 +7,8 @@ import DataBind from "./DataBind.js";
 import "./page-3.css";
 
 const Page3Container = ({ match }) => {
+  const arr = DataBind["SPRAY1"]["arr"];
+  const arrlast = arr.length - 1;
   const [w, setW] = useState("3x3");
   const [sensors, setSensors] = useState(null);
   const [running, setRunning] = useState([]);
@@ -16,6 +18,11 @@ const Page3Container = ({ match }) => {
   const [autoDisplay, setAutoDisplay] = useState(false);
   const [autoSecond, setAutoSecond] = useState(3);
   const [errorFirst, setErrorFirst] = useState(true);
+  const [timegap, setTimegap] = useState([
+    new Date(arr[0]["name"]),
+    new Date(arr[arrlast]["name"]),
+  ]);
+
   useEffect(() => {
     setW("3x3");
     setSensors(null);
@@ -77,8 +84,29 @@ const Page3Container = ({ match }) => {
 
       let sensorsWithData = sensorsChecked.map((key) => {
         let data = sensorsData[key]["arr"];
-        const maxValue = sensorsData[key]["max"];
-        const minValue = sensorsData[key]["min"];
+        // let maxValue = sensorsData[key]["max"];
+        // let minValue = sensorsData[key]["min"];
+        let maxValue;
+        let minValue;
+        data = data.filter(({ name, value }, i) => {
+          if (i === 0) {
+            maxValue = value;
+            minValue = value;
+          }
+          if (value > maxValue) {
+            maxValue = value;
+          }
+          if (value < minValue) {
+            minValue = value;
+          }
+          const d = new Date(name);
+          if (d >= timegap[0] && d <= timegap[1]) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+        console.log(data);
         let ok = true;
         const ucl = +sensors[key]["ucl"];
         const dcl = +sensors[key]["dcl"];
@@ -107,7 +135,7 @@ const Page3Container = ({ match }) => {
       }
       setSensorsWData(sensorsWithData);
     }
-  }, [errorFirst, fetchData, running, sensors]);
+  }, [errorFirst, fetchData, running, sensors, timegap]);
   return (
     <div className="PageContainer">
       <ViewController
@@ -124,6 +152,9 @@ const Page3Container = ({ match }) => {
         setAutoSecond={setAutoSecond}
         errorFirst={errorFirst}
         setErrorFirst={setErrorFirst}
+        timegap={timegap}
+        setTimegap={setTimegap}
+        DataBind={DataBind}
       />
       {sensors ? (
         <ChartDisplay
