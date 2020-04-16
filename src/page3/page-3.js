@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import ViewController from "./ViewController";
 import ChartDisplay from "./ChartDisplay";
-import dataArr from "../assest/dataArr.json";
+import DataBind from "./DataBind.js";
 
 import "./page-3.css";
 
@@ -12,9 +12,9 @@ const Page3Container = ({ match }) => {
   const [running, setRunning] = useState([]);
   const [sensorsWData, setSensorsWData] = useState([]);
   const [page, setPage] = useState(1);
-  const [fetchData, setFetchData] = useState(dataArr);
+  const [fetchData, setFetchData] = useState(DataBind);
   const [autoDisplay, setAutoDisplay] = useState(false);
-  const [autoSecond, setAutoSecond] = useState(1);
+  const [autoSecond, setAutoSecond] = useState(3);
   const [errorFirst, setErrorFirst] = useState(true);
   useEffect(() => {
     setW("3x3");
@@ -23,7 +23,7 @@ const Page3Container = ({ match }) => {
     setSensorsWData([]);
     setPage(1);
     setAutoDisplay(false);
-    setAutoSecond(1);
+    setAutoSecond(3);
     setErrorFirst(true);
   }, [match]);
   useEffect(() => {
@@ -69,24 +69,16 @@ const Page3Container = ({ match }) => {
       //   }
       //   return acc;
       // }, []);
-      const sensorsData = fetchData["dataArr"];
+      const sensorsData = fetchData;
       const sensorKeys = Object.keys(sensors);
       const sensorsChecked = sensorKeys.filter(
         (key) => sensors[key]["isChecked"]
       );
 
       let sensorsWithData = sensorsChecked.map((key) => {
-        let data = [];
-        let valueArr = [];
-        sensorsData.forEach((element) => {
-          data.push({
-            name: element["TIMETAG"],
-            value: +element[key],
-          });
-          valueArr.push(+element[key]);
-        });
-        const maxValue = Math.max(...valueArr);
-        const minValue = Math.min(...valueArr);
+        let data = sensorsData[key]["arr"];
+        const maxValue = sensorsData[key]["max"];
+        const minValue = sensorsData[key]["min"];
         let ok = true;
         const ucl = +sensors[key]["ucl"];
         const dcl = +sensors[key]["dcl"];

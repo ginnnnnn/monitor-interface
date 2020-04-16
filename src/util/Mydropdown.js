@@ -51,7 +51,9 @@ function SimpleSelect(props) {
           label="Age"
         >
           {mach.map((key, i) => (
-            <MenuItem value={key}>{key}</MenuItem>
+            <MenuItem key={key} value={key}>
+              {key}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>

@@ -46,8 +46,8 @@ const ViewController = ({
             className="AutoDisplay-Input"
             onChange={handleSecondOnChange}
             type="number"
-            min={1}
-            max={30}
+            min={3}
+            max={60}
             value={autoSecond}
           />
           <div className="AutoDisplay">秒</div>
